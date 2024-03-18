@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: poppins;
+    list-style-type: none;
+}
+
+:root{
+    --backgroundOne: #021D40 ;
+    --backgroundTwo:#022859;
+    --backgroundTree: #023373;
+    --BackgroundWhite: #fff;
+    --BackgroundWhiteTwo: #e7e6e6;
+    --Shaldown: rgb(0,0,0,0.3)
+}
+body{
+    text-decoration: none;
+    background: var(--BackgroundWhiteTwo);
+}
+Link{
+    text-decoration: none;
+}
+.header{
+    width: 7%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 2% 5px;
+    background: var(--backgroundOne);
+    color: #fff;
+}
+.logo{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+}
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+ 
+}
+li{
+    width: 100%;
+    text-decoration: none;
+    padding: 10px 0 10px 10px;
+    box-shadow: 1px 1px 6px var(--Shaldown) ;
+    border-radius: 3px;
+   
+}
+.optionMenu{
+    box-shadow: 5px 5px 2px var(--Shaldown);
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.settings{
+    width: 100%;
+    padding: 0 10px;
+}
+.containerPartnersOne{
+    display: flex;
+    min-width: 100%;
+    height: 100vh;
+}
+.containerPartnersTwo{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+    padding: 1%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.titleandBtn{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background: var(--BackgroundWhite);
+    box-shadow: 1px 1px 6px var(--Shaldown);
+    border-radius: 5px;
+}
+.btnMembers button, a{
+    background: var(--backgroundTwo);
+    color: #fff;
+    height: 4vh;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btnMembers{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+.members{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 6px var(--Shaldown) ;
+    padding: 1%;
+    border-radius: 5px;
+    background: var(--BackgroundWhite);
+    overflow: scroll;
+    scroll-snap-type: both mandatory;
+    scroll-padding: 10px;
+
+}
+table{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    
+    
+}
+thead td{
+    height: 4vh;
+    border: none;
+    border-radius: 3px;
+    min-width: 300px;
+    background:var(--backgroundTree);
+    color: #fff;
+    scroll-snap-align: start;
+    
+    
+}
+/* Search input*/
+.searchMembers{
+    display: flex;
+    gap: 10px;
+}
+.searchMembers input{
+    width: 500px;
+    height: 4vh;
+    border: none;
+    border-radius: 5px;
+    background: var(--BackgroundWhiteTwo);
+    text-align: center;
+}
+.searchMembers button{
+    background: var(--backgroundTwo);
+    color: #fff;
+    height: 4vh;
+    width: 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+.copy{
+    color: var(--backgroundOne);
+    font-size: 0.8rem;
+}
+
+/* Cadastro */
+.layoutForm{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+.titleandSubmit{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.sectionForm{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+.BlocForm{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+.campForm{
+    min-width: 427px;
+    max-width: 100%;
+    background: var(--BackgroundWhite);
+    padding: 10px;
+    height: auto;
+    
+}
+.campForm p{
+    font-weight: 500;
+}
+input, select, textarea{
+    border: none;
+    background: var(--BackgroundWhiteTwo);
+    padding: 5px;
+    border-radius: 5px;
+}
+input[type=text], [type=url], [type=email]{
+    min-width: 300px;
+}
+
+.blockbtn button, a{
+    background: var(--backgroundTwo);
+    color: #fff;
+    height: 4vh;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
