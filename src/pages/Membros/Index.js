@@ -7,7 +7,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const Membros = ({controlForm}) => {
+const Membros = ({controlMember}) => {
   return (
     <div className='containerPartnersOne'>
       <Header />
@@ -46,23 +46,22 @@ const Membros = ({controlForm}) => {
                   </tr>  
                 </thead>
                 <tbody>
-                  {controlForm && controlForm.map((cadMembers, i) =>(
-                    <tr key={i}>
-         
-                      <td>{cadMembers.name}</td>
-                      <td>{cadMembers.tel}</td>
-                      <td>{cadMembers.email}</td>
-                      <td>{cadMembers.dateBirth}</td>
-                      <td>{cadMembers.dateBatism}</td>
-                      <td>{cadMembers.dateMember}</td>
-                      <td>{cadMembers.jobChurch}</td>
-                      <td>{cadMembers.congregation}</td>
-                      <td>{cadMembers.linkFacebook}</td>
-                      <td>{cadMembers.linkInsta}</td>
-                      <td>{cadMembers.comentary}</td>
-                                         
-                      </tr>
-                    ))}
+                  {controlMember.map((item, index) =>(
+                    <tr key={index}>
+                      <td>{item.name}</td>
+                      <td>{item.tel}</td>
+                      <td>{item.email}</td>
+                      <td>{item.dateBirth}</td>
+                      <td>{item.dateBatism}</td>
+                      <td>{item.dateMember}</td>
+                      <td>{item.jobChurch}</td>
+                      <td>{item.congregation}</td>
+                      <td>{item.linkFacebook}</td>
+                      <td>{item.linkInsta}</td>
+                      <td>{item.comentary}</td>
+
+                    </tr>
+                  ))};
                 </tbody>
               </table>
               </div>

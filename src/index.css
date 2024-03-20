@@ -29,8 +29,8 @@ Link{
     align-items: center;
 } */
 .header{
-    width: 7%;
-    height: 100vh;
+    width: 10%;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,6 +38,7 @@ Link{
     padding: 2% 5px;
     background: var(--backgroundOne);
     color: #fff;
+    
 }
 .logo{
     display: flex;
@@ -90,8 +91,9 @@ li{
 .content{
     display: flex;
     flex-direction: column;
-    width: 93%;
-    padding: 1%;
+    height: 100vh;
+    width: 90%;
+    padding: 5%;
     justify-content: center;
     align-items: center;
     
@@ -211,13 +213,17 @@ thead td{
     
 }
 .campForm{
-    min-width: 427px;
+    min-width: 32%;
     max-width: 100%;
     background: var(--BackgroundWhite);
     padding: 10px;
     height: auto;
     
 }
+.BlocForm:nth-child(3){
+    width: 900px;
+}
+
 .campForm p{
     font-weight: 500;
 }
@@ -229,6 +235,17 @@ input, select, textarea{
 }
 input[type=text], [type=url], [type=email]{
     min-width: 300px;
+}
+.campForm textarea {
+    
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  
 }
 
 .blockbtn button, a{

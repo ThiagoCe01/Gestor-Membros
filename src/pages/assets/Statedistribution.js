@@ -1,18 +1,22 @@
+import { useState } from "react"
+import Cadastro from "../Cadastro/Index";
+import Membros from "../Membros/Index";
 
 
-import React from 'react'
-import { useState } from 'react';
-import Cadastro from '../Cadastro/Index';
-import Membros from '../Membros/Index';
 
 const Statedistribution = () => {
-const [controlForm, setControlForm] = useState([]);
+  const [controlMember, setControlMember] = useState ([]);
 
-  return (
+
+  const  addMember =(newMember) =>{
+    setControlMember( (prevMember) =>[...prevMember, newMember]);
+  };
+  
+
+  return ( 
     <div>
-        <Cadastro setControlForm={setControlForm}/>
-        
-        <Membros controlForm={controlForm} />
+      <Cadastro addMember={addMember}/>
+      {controlMember.length > 0 && <Membros controlMember={controlMember} />}
     </div>
   )
 }
