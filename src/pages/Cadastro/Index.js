@@ -1,23 +1,24 @@
-import React, { useState } from 'react'
+import { useState, useContext } from 'react';
 import Header from '../Header/Index'
-import Membros from '../Membros/Index';
+import { DataBaseContext } from '../assets/Database';
 
-const Cadastro = ( {addMember}) => {
- const [cadMembers, setCadMembers ] = useState({
-  name: '',tel:'', email:'', dateBirth:'', dateBatism:'', dateMember:'', jobChurch:'', congregation:'', linkFacebook:'', linkInsta:'', comentary:'' });
+const Cadastro = ( ) => {
+  const {setConstForm} = useContext(DataBaseContext);
+  const [cadMembers, setCadMembers] = useState ('');
+const handleSubmitCamps = (event) =>{
+  setCadMembers ({...cadMembers, [event.target.name]:event.target.value });
+} 
+
+const handleSubmitForm = (event) =>{
+event.preventDefault();
+setConstForm(prevForm =>[...prevForm, cadMembers])
+console.log(cadMembers);
+setCadMembers ('');
+
+}
 
 
-  
- const handleSubmitForm =(event)=>{
-    event.preventDefault();
-    addMember (cadMembers);
-    console.log(cadMembers)
-    setCadMembers (''); 
-};
 
- const handleSubmitCamps =(event)=>{
-  setCadMembers({...cadMembers, [event.target.name]:event.target.value})
- };
   return (
     <div className='containerPartnersOne'>
       <Header />
@@ -70,7 +71,7 @@ const Cadastro = ( {addMember}) => {
               </label>    
             <label className="campForm">
               <p>Qual a congregação</p>
-              <select name="congregation" value={cadMembers.congregation || ''} onChange={handleSubmitCamps} >
+              <select name="congregation" value={cadMembers.congregation || ''} onChange={handleSubmitCamps || ''} >
                 <option value="">Escolha</option>
                 <option value="105">105</option>
                 <option value="110">110</option>
@@ -115,7 +116,7 @@ const Cadastro = ( {addMember}) => {
 
       </div>
       </div>
-      <Membros Members={cadMembers}/>
+      
     </div>
   )
 }
